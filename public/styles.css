@@ -1,0 +1,31 @@
+/* Container for the thumbnails */
+.thumbnail-grid {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:  10px;
+    padding:  1em;
+    border:  1px solid #ccc;
+    border-radius:  5px;
+}
+
+/* Style for each thumbnail */
+.thumbnail-grid img {
+    width:  150px; /* Fixed width */
+    height:  150px; /* Fixed height */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius:  5px;
+}
+
+/* Optional: Styling for the download button */
+#downloadBtn {
+    display: none;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding:  10px  20px;
+    margin-top:  20px;
+    cursor: pointer;
+    border-radius:  5px;
+}

@@ -1,16 +1,27 @@
 <!-- views/index.ejs -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>YouTube Video Downloader</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>YouTube Video Downloader</h1>
-    <form action="/download" method="get">
+    <form id="downloadForm" action="/download" method="get">
         <label for="url">YouTube URL:</label>
         <input type="text" id="url" name="url" required>
-        <button type="submit">Download</button>
+        <div id="thumbnails" class="thumbnail-grid" style="display: none;">
+            <!-- Thumbnails will be dynamically added here -->
+        </div>
+        <label for="quality">Quality:</label>
+        <select id="quality" name="quality" style="display: none;">
+            <!-- Quality options will be dynamically added here -->
+        </select>
+        <button type="button" id="fetchInfoBtn">Fetch Info</button>
+        <button type="submit" id="downloadBtn" style="display: none;">Download</button>
     </form>
+    <script src="client-side.js"></script>
 </body>
 </html>
